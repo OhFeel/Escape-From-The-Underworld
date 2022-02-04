@@ -80,8 +80,7 @@ module.exports = async (client) => {
       
     } else {
       await client.guilds.cache
-        .get(mainjson.TestingServerID)
-        .commands.set(arrayOfSlashCommands);
+        .get(mainjson.TestingServerID).commands.set(arrayOfSlashCommands);
 
       // Register for all the guilds the bot is in
       // await client.application.commands.set(arrayOfSlashCommands);
