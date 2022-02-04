@@ -22,6 +22,7 @@ const last_saved_loc = db.get(`player_${message.author.id}.last_saved_location`)
 const embed_onderwereld_join = new Discord.MessageEmbed()
 .setColor(0x5865F2)
 .setDescription(`Je bent in de ${last_saved_loc}`)
+.setImage('https://cdn.discordapp.com/attachments/938882276765335584/939236600435593257/hell_blink.gif')
 
 let array_test_ffs = []
 if(m) {
