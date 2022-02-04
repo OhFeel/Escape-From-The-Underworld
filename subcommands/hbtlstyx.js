@@ -89,6 +89,7 @@ collector_goud_zoeken.on('collect', async (m) => {
         await m.deferReply()
         await db.add(`player_${message.author.id}.gold`, 1)
         const embed_goud_struik = new Discord.MessageEmbed()
+        .setImage('https://cdn.discordapp.com/attachments/938882276765335584/939228394439200808/rapper_steen_met_coin.png')
         .setColor(0x5865F2)
         .setDescription(`Je hebt ${client.emoji.goud} gouden munt gevonden onder een steen!` )
       
@@ -102,6 +103,7 @@ if(m.customId === 'boom') {
     await m.deferReply()
     await db.add(`player_${message.author.id}.gold`, 1)
     const embed_goud_struik = new Discord.MessageEmbed()
+    .setImage('https://cdn.discordapp.com/attachments/938882276765335584/939228928449601637/boompje_met_coin_asachbi.png')
     .setColor(0x5865F2)
     .setDescription(`Je hebt ${client.emoji.goud} gouden muntgevonden in een boom!`)
   
