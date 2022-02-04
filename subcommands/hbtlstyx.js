@@ -76,6 +76,7 @@ collector_goud_zoeken.on('collect', async (m) => {
         await m.deferReply()
         await db.add(`player_${message.author.id}.gold`, 1)
         const embed_goud_struik = new Discord.MessageEmbed()
+        .setImage('https://cdn.discordapp.com/attachments/938882276765335584/939227999704858665/bush_met_coin_inshallah.png')
         .setColor(0x5865F2)
         .setDescription(`Je hebt ${client.emoji.goud} gouden munt gevonden in een struik!`)
     
