@@ -33,7 +33,7 @@ module.exports = {
         }
 
         if(m.customId === 'goud') {
-            if(player_info.gold > 2) {
+            if(player_info.gold >= 2) {
                 const embed_geengoud = new Discord.MessageEmbed()
                 .setColor("#303434")
                 .setDescription(`Je hebt al 2 ${client.emoji.goud} gouden munten`)

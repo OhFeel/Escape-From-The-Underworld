@@ -14,7 +14,7 @@ module.exports = {
    run: async (client, message, args) => {
 
 
-    const have_weapon=  await db.get(`player_${message.author.id}.weapon`) ? "!": ". Oh sorry die heb je niet... je speelt te veilig"
+    const have_weapon=  await db.get(`player_${message.author.id}.weapon`) ? "!": ". Oh sorry die heb je niet... je speelt te voorzichtig"
     const have_weapon_check=  await db.get(`player_${message.author.id}.weapon`)
     const embed = new Discord.MessageEmbed()
 .setColor("#303434")
