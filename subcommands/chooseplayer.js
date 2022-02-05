@@ -13,12 +13,12 @@ module.exports = {
 
    run: async (client, message, args) => {
 const embed = new Discord.MessageEmbed()
-.setColor(0x5865F2)
+.setColor("#303434")
 .setDescription(`Jij hebt nog geen profiel!\n Ik maak er wel een voor jou!`)
 
 const send_msg_embed = await message.reply({embeds: [ embed ]})
 const embed1 = new Discord.MessageEmbed()
-.setColor(0x5865F2)
+.setColor("#303434")
 .setDescription(`Klaar!\nIk heb een profiel voor je gemaakt! (en je hebt 1 gratis goude munt!)`)
 db.set(`player_${message.author.id}`, {
     player: 'kanker',

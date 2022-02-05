@@ -20,7 +20,7 @@ const locations = ['Elysische velden', 'Tartaros', 'Asphodelvelden', 'Styx', 'Ph
 const last_saved_loc = db.get(`player_${message.author.id}.last_saved_location`)
 
 const embed_onderwereld_join = new Discord.MessageEmbed()
-.setColor(0x5865F2)
+.setColor("#303434")
 .setDescription(`Je bent nu in de ${last_saved_loc}, waar wil je heen?`)
 .setImage('https://cdn.discordapp.com/attachments/938882276765335584/939236600435593257/hell_blink.gif')
 
@@ -77,7 +77,7 @@ setTimeout(() => {
     if(last_saved_loc === 'styx') {
         
         const embed = new Discord.MessageEmbed()
-    .setColor(0x5865F2)
+    .setColor("#303434")
     .setDescription(`Je bent bij de ${last_saved_loc}, wat wil je nu doen?`)
     .setImage('https://i.imgur.com/MAPMrc4.png')
     message.reply({embeds: [embed],components: [new MessageActionRow().addComponents(
