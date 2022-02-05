@@ -154,6 +154,7 @@ await db.set(`player_${message.author.id}.last_saved_location`, 'bs')
     collector_wapens.on('collect', async (m) => {
 if(m.customId === 'zwaard_bs') {
 const zwaard_bought = new Discord.MessageEmbed()
+.setImage('https://cdn.discordapp.com/attachments/938896295366651944/939248215461609543/zwaard_dinge.png')
 .setColor(0x5865F2)
 .setDescription('Je hebt succesvol een **zwaard** gekocht')
 const player_info_gold = await db.get(`player_${message.author.id}.gold`)
@@ -176,6 +177,7 @@ if(player_info_gold < 2) return m.reply({embeds: [niet_genoeg_goud]}), na_bs()
 
 
 const zwaard_bought = new Discord.MessageEmbed()
+.setImage('https://cdn.discordapp.com/attachments/938896295366651944/939248371271614536/axe_dinge.png')
 .setColor(0x5865F2)
 .setDescription('Je hebt succesvol een **bijl** gekocht')
 
@@ -196,6 +198,7 @@ const player_info_gold = await db.get(`player_${message.author.id}.gold`)
 if(player_info_gold < 3) return m.reply({embeds: [niet_genoeg_goud]}), na_bs()
     
     const zwaard_bought = new Discord.MessageEmbed()
+    .setImage('https://media.discordapp.net/attachments/938896295366651944/939248445066207292/knots_dinge.png')
     .setColor(0x5865F2)
     .setDescription('Je hebt succesvol een **knots** gekocht')
     
