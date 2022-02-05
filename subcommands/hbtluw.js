@@ -69,7 +69,7 @@ collector_ja_nee_iets.on("collect", async (m) => {
         m.update({embeds: [embed_iets], components:[row]})
         const embed_dood = new Discord.MessageEmbed()
         .setColor(0x5865F2)
-        .setImage("https://i.imgur.com/uLDvwuV.png")
+        .setImage("https://cdn.discordapp.com/attachments/938896295366651944/939464855759499274/Kerberos.gif")
         .setDescription('Je bent dood gegaan!\n **Kerberos** heeft je opgegeten!\n\n\nJe profiel is gewist, om opnieuw te beginnen type \`?start\`')
      
         const embed_gg = new Discord.MessageEmbed()
