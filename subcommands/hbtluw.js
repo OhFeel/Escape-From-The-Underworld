@@ -54,6 +54,7 @@ module.exports = {
 const embed_iets = new Discord.MessageEmbed()
             .setColor(0x5865F2)
             .setDescription('Je ziet iets glimmen, wil je er naar toe?')
+            .setImage('https://cdn.discordapp.com/attachments/938896295366651944/939486375902838794/hell_gif_shine.gif')
             b0.setDisabled(false)
             b1.setDisabled(false)
             row.addComponents(b0,b1)
