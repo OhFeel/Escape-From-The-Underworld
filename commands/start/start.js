@@ -3,7 +3,7 @@ const { Message, Client, MessageActionRow, MessageButton, MessageEmbed, MessageA
 const db = require('quick.db')
 module.exports = {
    name: "start",
-   aliases: ["begin", "play", ""],
+   aliases: ["begin", "play", "s"],
 
    description: "",
    usage: "",
@@ -21,20 +21,53 @@ const last_saved_loc = db.get(`player_${message.author.id}.last_saved_location`)
 
 const embed_onderwereld_join = new Discord.MessageEmbed()
 .setColor(0x5865F2)
-.setDescription(`Je bent in de ${last_saved_loc}`)
+.setDescription(`Je bent nu in de ${last_saved_loc}, waar wil je heen?`)
 .setImage('https://cdn.discordapp.com/attachments/938882276765335584/939236600435593257/hell_blink.gif')
 
 let array_test_ffs = []
 if(m) {
     if(last_saved_loc === 'onderwereld') {
     array_test_ffs.push('hoi') 
-         await m.editReply({embeds: [embed_onderwereld_join]})
+         await m.editReply({embeds: [embed_onderwereld_join],components: [new MessageActionRow().addComponents(
+            new MessageButton()
+            .setStyle("SUCCESS")
+            .setLabel('Ontdekken')
+            .setCustomId('explore_underworld')
+            .setEmoji('<:square_discovery:939295416724369480>')
+            , new MessageButton()
+            .setStyle("DANGER")
+            .setLabel('stop')
+            .setCustomId('stop_uw')
+            .setEmoji('🛑')
+        
+           
+        )]})
+ 
+            return await handle_buttons_underworld()
         
     }
 }
 
     if(array_test_ffs.length === 0) {
-        if(last_saved_loc === 'onderwereld') return await message.reply({embeds: [embed_onderwereld_join]})
+        if(last_saved_loc === 'onderwereld') {
+
+         await message.reply({embeds: [embed_onderwereld_join],components: [new MessageActionRow().addComponents(
+            new MessageButton()
+            .setStyle("SUCCESS")
+            .setLabel('Ontdekken')
+            .setCustomId('explore_underworld')
+            .setEmoji('<:square_discovery:939295416724369480>')
+            , new MessageButton()
+            .setStyle("DANGER")
+            .setLabel('stop')
+            .setCustomId('stop_uw')
+            .setEmoji('🛑')
+        
+           
+        )]})
+  
+            return await handle_buttons_underworld()
+         }
     }  
 
 
@@ -165,6 +198,10 @@ setTimeout(() => {
         }
         async function handle_buttons_styx() {
             const command = client.subcommands.get('hbtlstyx')
+            await command.run(client, message, args);
+        }
+        async function handle_buttons_underworld() {
+            const command = client.subcommands.get('hbtluw')
             await command.run(client, message, args);
         }
    },
