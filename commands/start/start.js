@@ -105,6 +105,11 @@ setTimeout(() => {
 }, 1000);
 
 
+if( last_saved_loc === 'bs') {
+    await handle_buttons_na_bs()
+}
+
+
 
 
 
@@ -202,6 +207,10 @@ setTimeout(() => {
         }
         async function handle_buttons_underworld() {
             const command = client.subcommands.get('hbtluw')
+            await command.run(client, message, args);
+        }
+        async function handle_buttons_na_bs() {
+            const command = client.subcommands.get('na_bs')
             await command.run(client, message, args);
         }
    },
