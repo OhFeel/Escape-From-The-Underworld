@@ -1,10 +1,12 @@
 const { Client, Collection } = require("discord.js");
 // Import Discord.Js.
 const client = new Client({ intents: 32767 });
+const db = require("quick.db")
 // Make New Discord Client.
 module.exports = client;
 // Export Client To Give Other Files Access.
 const chalk = require("chalk");
+
 // Import Chalk
 
 // ———————————————[Global Variables]———————————————
@@ -17,6 +19,7 @@ client.emoji = {
    goud: '<:Goldcoin:938894175817072650>',
 
 }
+
 
 
 client.config = require("./botconfig/main.json");

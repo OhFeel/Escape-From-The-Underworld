@@ -76,8 +76,8 @@ collector_ja_nee_iets.on("collect", async (m) => {
         .setColor("#303434")
         .setImage("https://i.imgur.com/fsqaVrm.png")
         .setDescription(`Je hebt 3 ${client.emoji.goud} Gouden munten gevonden!`)
-        const random_number = await Math.floor(Math.random() * 100)
-        console.log(random_number)
+        const random_number =  Math.floor(Math.random() * 100)
+        console.log("[RANDOM NUMBER] " + random_number)
         if (random_number >= 35) {
             await m.deferReply()
             await db.delete(`player_${message.author.id}`)
@@ -169,7 +169,7 @@ await db.subtract(`player_${message.author.id}.gold`, 2)
 m.reply({embeds: [zwaard_bought]})
 na_bs()
 }
-if(m.customId === 'bijl_bs') {
+if(m.customId === 'axe_bs') {
 const niet_genoeg_goud = new Discord.MessageEmbed()
 .setColor("#303434")
 .setDescription('Je hebt niet genoeg goud!')
@@ -222,7 +222,7 @@ if(player_info_gold < 3) return m.reply({embeds: [niet_genoeg_goud]}), na_bs()
 
 
     })
-
+ 
 
 
 
@@ -321,7 +321,8 @@ if(player_info_gold < 2) return m.reply({embeds: [niet_genoeg_goud]}), na_bs()
     m.reply({embeds: [zwaard_bought]})
     na_bs()
 }
-if(m.customId === 'bijl_bs') {
+
+if(m.customId === 'axe_bs') {
     const niet_genoeg_goud = new Discord.MessageEmbed()
 .setColor("#303434")
 .setDescription('Je hebt niet genoeg goud!')
@@ -343,6 +344,7 @@ if(player_info_gold < 2) return m.reply({embeds: [niet_genoeg_goud]}), na_bs()
         m.reply({embeds: [zwaard_bought]})
         na_bs()
     }
+
     if(m.customId === 'knots_bs') {
         const niet_genoeg_goud = new Discord.MessageEmbed()
 .setColor("#303434")
@@ -381,6 +383,7 @@ if(player_info_gold < 3) return m.reply({embeds: [niet_genoeg_goud]}), na_bs()
 
         }
     }
+    
     
 
 )}
