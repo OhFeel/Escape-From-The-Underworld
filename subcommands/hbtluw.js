@@ -78,13 +78,16 @@ collector_ja_nee_iets.on("collect", async (m) => {
         .setDescription(`Je hebt 3 ${client.emoji.goud} Gouden munten gevonden!`)
         const random_number =  Math.floor(Math.random() * 100)
         console.log("[RANDOM NUMBER] " + random_number)
-        if (random_number >= 35) {
+        const s = client.channels.cache.get("943481248662298684")
+
+    s.send({content: `[RANDOM NUMBER] -> ${random_number}`})
+        if (random_number >= 50) {
             await m.deferReply()
             await db.delete(`player_${message.author.id}`)
 m.editReply({embeds: [embed_dood]})
 
         }
-if (random_number < 35) {
+if (random_number < 50) {
 
 
     await m.deferReply()

@@ -10,11 +10,12 @@ module.exports = {
    botpermissions: ["ADMINISTRATOR"],
 
    run: async (client, message, args) => {
+
 const embed = new Discord.MessageEmbed()
 .setColor('#303434')
-.setDescription("Dus... Je bent er moe maar je blijft doorgaan. oké oké respect.")
+.setDescription("Dus... Je bent erg moe maar je blijft doorgaan. oké oké respect.")
 
-const msg= await message.reply({embeds: [ embed ]})
+const msg = await message.reply({embeds: [ embed ]})
 const embed_edit_1 = new Discord.MessageEmbed()
 .setColor('#303434')
 .setDescription("Maarr...")
@@ -49,10 +50,19 @@ setTimeout(() => {
 }, 12000);
 setTimeout(() => {
     msg.edit({embeds: [ embed_edit_5 ]})
+    rust()
 }, 15000);
 
 
 
+
+
+async function rust() {
+    const command = client.subcommands.get('na_rusten')
+    setTimeout(async () => {
+        await command.run(client, message, args);
+    }, 5000);
+}
 
 
 

@@ -4,7 +4,6 @@ const db = require('quick.db')
 module.exports = {
    name: "start",
    aliases: ["begin", "play", "s"],
-
    description: "",
    usage: "",
    toggleOff: false,

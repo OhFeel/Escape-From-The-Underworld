@@ -21,7 +21,7 @@ const embed1 = new Discord.MessageEmbed()
 .setColor("#303434")
 .setDescription(`Klaar!\nIk heb een profiel voor je gemaakt! (en je hebt 1 gratis goude munt!)`)
 db.set(`player_${message.author.id}`, {
-    player: 'kanker',
+    player: 'herakles',
     gold: 1,
     last_saved_location: 'styx',
 

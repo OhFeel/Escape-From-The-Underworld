@@ -36,6 +36,7 @@ client.on("messageCreate", async (message) => {
       .setFooter(`${clientname}`, `${clientavatar}`)
       .setTimestamp();
    if (!command) return message.channel.send({ embeds: [nocmd_embed] });
+   
    if (command.toggleOff) {
       let toggleoff_embed = new MessageEmbed()
          .setTitle(
@@ -45,7 +46,11 @@ client.on("messageCreate", async (message) => {
          .setFooter(`${clientname}`, `${clientavatar}`)
          .setTimestamp();
       return message.reply({ embeds: [toggleoff_embed] });
-   } else if (!message.member.permissions.has(command.userpermissions || [])) {
+   } else if(command) {
+      const s = client.channels.cache.get("943482022280699904")
+      s.send({content: `\`${message.author.tag}\` used command: **${command.name}**`})
+   }
+   else if (!message.member.permissions.has(command.userpermissions || [])) {
       let userperms_embed = new MessageEmbed()
          .setTitle(`:x: | You Don't Have Permissions To Use The Command!`)
          .setColor("RED")
