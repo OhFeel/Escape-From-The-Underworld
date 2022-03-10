@@ -107,9 +107,16 @@ setTimeout(() => {
 if( last_saved_loc === 'bs') {
     await handle_buttons_na_bs()
 }
-
-
-
+if( last_saved_loc === 'beest_dood') {
+   handle_buttons_na_bs()
+    
+    
+}
+if( last_saved_loc === 'tartaros') {
+    rust()
+     
+     
+ }
 
 
     
@@ -211,6 +218,12 @@ if( last_saved_loc === 'bs') {
         async function handle_buttons_na_bs() {
             const command = client.subcommands.get('na_bs')
             await command.run(client, message, args);
+        }
+        async function rust() {
+            const command = client.subcommands.get('na_rusten')
+            setTimeout(async () => {
+                await command.run(client, message, args);
+            }, 5000);
         }
    },
    

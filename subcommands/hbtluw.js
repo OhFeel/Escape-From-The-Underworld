@@ -100,7 +100,7 @@ if (random_number < 50) {
         const embed_blacksmith = new Discord.MessageEmbed()
     .setColor("#303434")
 .setImage("https://media.discordapp.net/attachments/938896295366651944/939247261089677422/output-onlinegiftools.gif")
-    .setDescription(`Je bent een smid tegengekomen!`)
+    .setDescription(`Je bent Hephaistos tegengekomen!`)
  const ms= await  m.channel.send({embeds: [embed_blacksmith]})
  setTimeout(async () => {
 const zwaar_bs = new MessageButton()
@@ -134,7 +134,7 @@ await db.set(`player_${message.author.id}.last_saved_location`, 'bs')
     const embed_blacksmith_prijzen = new Discord.MessageEmbed()
         .setColor("#303434")
    .setImage("https://media.discordapp.net/attachments/938896295366651944/939247261089677422/output-onlinegiftools.gif")
-        .setDescription(`Je bent een smid tegengekomen!\nHij verkoopt 3 wapens!\n\n<:zwaar_bs:939304930299232306> Zwaard: 2 ${client.emoji.goud}\n<:axe_bs:939304990244225074> Bijl: 2 ${client.emoji.goud}\n<:knots_bs:939305031360999464> Knots: 3 ${client.emoji.goud}`)
+        .setDescription(`Je bent Hephaistos tegengekomen!\nHij verkoopt 3 wapens!\n\n<:zwaar_bs:939304930299232306> Zwaard: 2 ${client.emoji.goud}\n<:axe_bs:939304990244225074> Bijl: 2 ${client.emoji.goud}\n<:knots_bs:939305031360999464> Knots: 3 ${client.emoji.goud}`)
         ms.edit({embeds: [embed_blacksmith_prijzen], components: [row1]})
         }, 5000);
 
@@ -253,7 +253,7 @@ if(player_info_gold < 3) return m.reply({embeds: [niet_genoeg_goud]}), na_bs()
             const embed_blacksmith = new Discord.MessageEmbed()
         .setColor("#303434")
    .setImage("https://media.discordapp.net/attachments/938896295366651944/939247261089677422/output-onlinegiftools.gif")
-        .setDescription(`Je bent een smid tegengekomen!`)
+        .setDescription(`Je bent Hephaistos tegengekomen!`)
      const ms= await  m.channel.send({embeds: [embed_blacksmith]})
      setTimeout(async () => {
 const zwaar_bs = new MessageButton()
@@ -287,7 +287,7 @@ await db.set(`player_${message.author.id}.last_saved_location`, 'bs')
         const embed_blacksmith_prijzen = new Discord.MessageEmbed()
             .setColor("#303434")
        .setImage("https://media.discordapp.net/attachments/938896295366651944/939247261089677422/output-onlinegiftools.gif")
-            .setDescription(`Je bent een smid tegengekomen!\nHij verkoopt 3 wapens!\n\n<:zwaar_bs:939304930299232306> Zwaard: 2 ${client.emoji.goud}\n<:axe_bs:939304990244225074> Bijl: 2 ${client.emoji.goud}\n<:knots_bs:939305031360999464> Knots: 3 ${client.emoji.goud}`)
+            .setDescription(`Je bent Hephaistos tegengekomen!\nHij verkoopt 3 wapens!\n\n<:zwaar_bs:939304930299232306> Zwaard: 2 ${client.emoji.goud}\n<:axe_bs:939304990244225074> Bijl: 2 ${client.emoji.goud}\n<:knots_bs:939305031360999464> Knots: 3 ${client.emoji.goud}`)
             ms.edit({embeds: [embed_blacksmith_prijzen], components: [row1]})
             }, 5000);
 
